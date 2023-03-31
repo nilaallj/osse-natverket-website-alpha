@@ -1,0 +1,15 @@
+{{ define "before-main" }}
+	{{- partial "components/breadcrumbs" . -}}
+{{ end }}
+
+{{ define "inside-main" }}
+	<h1 class="fs-fluid-900 fw-700">{{ .Title }}</h1>
+	{{ .Content }}
+	<ul>
+		{{ range .Pages }}
+			<li>
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			</li>
+		{{ end }}
+	</ul>
+{{ end }}

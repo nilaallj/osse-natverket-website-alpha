@@ -1,0 +1,12 @@
+:where(button, .btn) {
+	all: unset;
+	outline: revert;
+	outline-offset: revert;
+	cursor: pointer;
+	display: inline-flex;
+	background-color: transparent;
+	
+	> :is(svg, use) {
+		fill: currentcolor;
+	}
+}

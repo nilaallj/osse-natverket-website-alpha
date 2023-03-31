@@ -1,0 +1,311 @@
+@layer normalize, root;
+@layer main { @layer base, components, utilities; }
+@layer overrides { @layer user, a11y; }
+@layer overrides.user { @layer global, single; }
+
+@font-face {
+	font-family: "PT Root UI";
+	src: url("pt-root-ui_vf.woff2") format("woff2-variations");
+	font-style: normal;
+	font-weight: 300 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Golos UI";
+	src: url("golos-ui_vf.woff2") format("woff2-variations");
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Merriweather";
+	src: url("merriweather_vf.woff2") format("woff2-variations");
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: swap;
+}
+
+@layer normalize {
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: unset;
+	}
+
+	:root {
+		display: grid;
+		height: 100%;
+		overflow-x: hidden;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeSpeed;
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		:root {
+			scroll-behavior: smooth;
+		}
+	}
+
+	img, video, canvas, svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	button {
+		all: unset;
+		outline: revert;
+		outline-offset: revert;
+		padding: .25em;
+		cursor: pointer;
+	}
+
+	address, input, button, textarea, select, abbr {
+		font: inherit;
+	}
+
+	h1, h2, h3, h4, h5, h6, small {
+		font-size: inherit;
+	}
+
+	ul[role="list"] {
+		list-style: none;
+		padding-inline-start: unset;
+	}
+}
+
+@layer root {
+	:root {
+		/* Font family stacks */
+		--ff-sans-body: "PT Root UI", "Bahnschrift", system-ui, "Seorge UI Variable", sans-serif;
+		--ff-sans-ui: "Golos UI", "PT Root UI", "Bahnschrift", system-ui, "Seorge UI Variable", sans-serif;
+		--ff-serif: "Merriweather", "Georgia", serif;
+
+		/* Font sizes */
+		--fs-fluid-300: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+		--fs-fluid-400: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+		--fs-fluid-500: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+		--fs-fluid-600: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+		--fs-fluid-700: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+		--fs-fluid-800: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+		--fs-fluid-900: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+		/* Font weights */
+		--fw-light: 300;
+		--fw-regular: 400;
+		--fw-medium: 500;
+		--fw-bold: 700;
+		--fw-black: 900;
+
+		/* Colors */
+		--clr-brand: hsl(222 54% 30%);
+		--clr-brand-bright: hsl(209 96% 54%);
+		--clr-contrast: hsl(45 100% 51%);
+	}
+}
+
+@layer main.base {
+	body {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		color: CanvasText;
+		background-color: Canvas;
+		accent-color: var(--clr-brand);
+		font-family: var(--ff-sans-body);
+		font-weight: var(--fw-regular);
+		line-height: 1.5;
+	}
+
+	main {
+		font-size: var(--fs-fluid-400);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--ff-serif);
+	}
+
+	:is(a, button) > svg {
+		fill: currentColor;
+	}
+
+	main > *:not(.hero-grid) {
+		max-inline-size: 66ch;
+	}
+}
+
+@layer main.components {
+	.body-header {
+		display: flex;
+		justify-content: space-between;
+		min-height: 2.5em;
+	}
+
+	.skip-link {
+		position: absolute;
+		padding: 1em;
+		color: var(--clr-brand);
+		background-color: var(--clr-contrast);
+		border: .25em solid;
+		font-family: var(--ff-sans-ui);
+		font-weight: var(--fw-bold);
+	}
+
+	/* Primary navigation */
+
+	.primary-nav {
+		--toggle-duration: 200ms;
+		position: relative;
+	}
+
+	.primary-nav ul {
+		display: flex;
+		min-height: 0;
+		transition-property: visibility;
+	}
+
+	#primary-nav-list {
+		position: absolute;
+		right: 0;
+	}
+
+	#primary-nav-list > li > a {
+		white-space: nowrap;
+	}
+
+	.primary-nav ul {
+		transition-duration: var(--toggle-duration);
+	}
+
+	.primary-nav li {
+		color: white;
+		background-color: var(--clr-brand);
+	}
+
+	.sublist-parent {
+		display: grid;
+		grid-template-columns: min-content 2em;
+		grid-template-rows: max-content 0fr;
+		overflow-y: hidden;
+		transition-property: grid-template-rows;
+		transition-duration: var(--toggle-duration);
+	}
+
+	.sublist-parent:has(> button[aria-expanded="true"]) {
+		grid-template-rows: max-content 1fr;
+	}
+
+	.btn-subnav-toggle {
+		justify-self: end;
+	}
+
+	.primary-nav a {
+		color: inherit;
+		display: flow-root;
+		font-family: var(--ff-sans-ui);
+		font-size: 1.1rem;
+		text-decoration: none;
+		padding: 0.5em;
+		transition-property: font-weight;
+		transition-duration: 200ms;
+	}
+
+	.primary-nav a:is(:hover, :focus-visible, :has(+ button:is(:hover, :focus-visible))) {
+		font-weight: var(--fw-bold);
+	}
+
+	.primary-nav li > :is(a, button):focus-visible {
+		outline: var(--clr-contrast) dashed medium;
+		outline-offset: -5px;
+	}
+
+	.icon-subnav-toggle {
+		transition-property: rotate;
+		transition-duration: 150ms;
+	}
+
+	button[aria-expanded="true"] > .icon-subnav-toggle {
+		rotate: 180deg;
+	}
+
+	.primary-nav-sublist {
+		grid-column: 1 / -1;
+		flex-direction: column;
+	}
+
+	button[aria-expanded="false"] + .primary-nav-sublist {
+		visibility: hidden;
+	}
+
+	.primary-nav-sublist li {
+		border-top: 0.05em solid;
+	}
+
+	@media screen and (max-width: calc(40em - 0.1px)) {
+		.primary-nav ul {
+			flex-direction: column;
+		}
+
+		.btn-svw-nav-toggle[aria-expanded="false"] + #primary-nav-list {
+			visibility: hidden;
+		}
+
+		#primary-nav-list > li:not(:first-child) {
+			border-top: 0.05em solid;
+		}
+
+		.sublist-parent {
+			grid-template-columns: min-content 1fr;
+		}
+	}
+
+	@media screen and (min-width: 40em) {
+		.btn-svw-nav-toggle {
+			display: none;
+		}
+
+		#primary-nav-list {
+			align-items: start;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.primary-nav ul {
+			--toggle-duration: 0s;
+		}
+	}
+
+	/* Cards */
+	.card {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card img {
+		order: -1;
+	}
+}
+
+@layer main.utilities {
+	.fs-fluid-300 { font-size: var(--fs-fluid-300); }
+	.fs-fluid-400 { font-size: var(--fs-fluid-400); }
+	.fs-fluid-500 { font-size: var(--fs-fluid-500); }
+	.fs-fluid-600 { font-size: var(--fs-fluid-600); }
+	.fs-fluid-700 { font-size: var(--fs-fluid-700); }
+	.fs-fluid-800 { font-size: var(--fs-fluid-800); }
+	.fs-fluid-900 { font-size: var(--fs-fluid-900); }
+}
+
+@layer overrides.a11y {
+	.visually-hidden:not(:focus):not(:active) {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+}

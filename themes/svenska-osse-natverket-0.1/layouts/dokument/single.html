@@ -1,0 +1,37 @@
+{{ define "before-main" }}
+	{{- partial "components/breadcrumbs" . -}}
+{{ end }}
+
+{{ define "inside-main" }}
+	<div class="main-wrapper">
+		<div class="front-matter">
+			<h1 class="post-title-headline fs-fluid-900">{{ .Title }}</h1>
+			<div class="post-meta-container">
+				{{- with .Params.författare -}}
+					<ul role="list">
+						{{- range ($.GetTerms "författare") -}}
+							<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+						{{- end -}}
+					</ul>
+				{{- end -}}
+				{{- with .Params.taggar -}}
+					<ul role="list">
+						{{- range ($.GetTerms "taggar") -}}
+							<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+						{{- end -}}
+					</ul>
+				{{ end }}
+				{{- with .Date -}}
+					<time datetime="{{ . | time.Format `2006-01-02` }}">{{ . | time.Format ":date_long" }}</time>
+				{{- end -}}
+			</div>
+			{{- with .Params.featured_img -}}
+				<img class="single-featured-img" src="{{ . }}">
+			{{- end -}}
+		</div>
+		{{- if .Params.include_toc }} {{- partial "components/toc" .TableOfContents -}} {{ end -}}
+		<div class="body-matter">
+			{{ .Content }}
+		</div>
+	</div>
+{{ end }}

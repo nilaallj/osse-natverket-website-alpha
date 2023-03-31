@@ -1,0 +1,29 @@
+* {
+	margin: unset;
+
+	&, &::before, &::after {
+		box-sizing: border-box;
+	}
+}
+
+img, video, canvas, svg {
+	display: block;
+	max-width: 100%
+}
+
+abbr, address, input, button, textarea, select {
+	font: inherit;
+}
+
+ul[role="list"] {
+	list-style: none;
+	padding-inline-start: unset;
+}
+
+li {
+	white-space: normal;
+}
+
+nav a {
+	text-decoration: none;
+}

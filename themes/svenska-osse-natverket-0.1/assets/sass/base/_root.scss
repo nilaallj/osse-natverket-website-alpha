@@ -1,0 +1,33 @@
+:root {
+	/* Font family stacks */
+	--ff-sans: "Open Sans", "Open Sans-fallback", sans-serif;
+	--ff-serif: "League Spartan", "Georgia", serif;
+
+	/* Font sizes */
+	--fs-fluid-300: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+	--fs-fluid-400: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+	--fs-fluid-500: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+	--fs-fluid-600: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+	--fs-fluid-700: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+	--fs-fluid-800: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+	--fs-fluid-900: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+	/* Font weights */
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-black: 900;
+
+	/* Colors */
+	--clr-canvas: hsl(226 87% 97%);
+	--clr-text-primary: hsl(none none 10%);
+	--clr-text-secondary: hsl(222 54% 24%);
+	--clr-text-teritary: hsl(223 62% 14%);
+	--clr-text-dimmed: hsl(222 17% 47%);
+	--clr-brand-primary: hsl(222 54% 30%);
+	--clr-brand-secondary: hsl(209 96% 54%);
+	--clr-brand-teritary: hsl(207 60% 64%);
+	--clr-accent: hsl(30 100% 50%);
+}

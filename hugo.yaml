@@ -1,0 +1,108 @@
+baseURL:
+title: Svenska OSSE-nätverket
+theme: svenska-osse-natverket-0.1
+
+defaultContentLanguage: sv-se
+languageCode: sv-se
+timeZone: Europe/Stockholm
+
+disableHugoGeneratorInject: true
+
+summaryLength: 45
+
+removePathAccents: true
+
+taxonomies:
+  tagg: "taggar"
+  land: "länder"
+  författare: "författare"
+
+permalinks:
+  länder: /dokument/lander/:slug/
+  författare: /dokument/forfattare/:slug/
+  taggar: /dokument/taggar/:slug/
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: true
+
+menu:
+  primary:
+  # Överst ordnade
+  - name: Dokument
+    identifier: dokument
+    url: /dokument/
+    weight: 10
+  - name: Stipendier
+    url: /stipendier/
+    weight: 20
+  - name: Medlemskap
+    identifier: medlemskap
+    url: /medlemskap/
+    weight: 30
+  - name: Om OSSE-nätverket
+    identifier: om
+    url: /om/
+    weight: 40
+  - name: Vad är OSSE?
+    identifier: vad-ar-osse
+    url: /vad-ar-osse/
+    weight: 50
+  # Underordnade till "Dokument"
+  - name: Referat
+    parent: dokument
+    identifier: referat
+    url: /dokument/referat/
+    weight: 10
+  - name: Apeller
+    parent: dokument
+    identifier: apeller
+    url: /dokument/apeller/
+    weight: 20
+  - name: Protokollarkiv
+    parent: dokument
+    identifier: protokollarkiv
+    url: /dokument/protokollarkiv/
+    weight: 30
+  # Underordnade till "Medlemskap"
+  - name: Våra medlemmar
+    parent: medlemskap
+    identifier: vara-medlemmar
+    url: /medlemskap/vara-medlemmar/
+    weight: 10
+  # Underordnade till "Om OSSE-nätverket"
+  - name: Styrelse
+    parent: om
+    identifier: styrelse
+    url: /om/styrelse/
+    weight: 10
+  - name: Verksamhet
+    parent: om
+    identifier: verksamhet
+    url: /om/verksamhet/
+    weight: 20
+  - name: Kontakt
+    parent: om
+    identifier: kontakt
+    url: /om/kontakt/
+    weight: 20
+  # Underordnade till "Vad är OSSE?"
+  - name: Länkar
+    parent: vad-ar-osse
+    identifier: lankar
+    url: /vad-ar-osse/lankar/
+    weight: 10
+  - name: Den svenska självutvärderingen
+    parent: vad-ar-osse
+    identifier: den-svenska-sjalvutvarderingen
+    url: /vad-ar-osse/den-svenska-sjalvutvarderingen
+    weight: 20
+
+minify:
+  disableCSS: true
+  tdewolff:
+    html:
+      keepQuotes: true
+      keepDefaultAttrVals: false

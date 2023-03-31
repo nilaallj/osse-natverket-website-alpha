@@ -1,0 +1,24 @@
+{{- define "before-main" -}}
+	{{- partial "components/breadcrumbs" . -}}
+{{- end -}}
+
+{{- define "inside-main" -}}
+	<h1 class="fs-fluid-900 fw-bold">{{ .Title }}</h1>
+	<ul class="card-list" role="list">
+		{{- range .Pages.ByDate.Reverse -}}
+			<li class="card">
+				<div class="card-content">
+					<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+					<div class="card-snippet">
+						<a class="card-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+						<div class="card-meta">
+							<p>av {{ .Params.författare }}</p>
+							<time datetime="{{ .Date | time.Format `2006-01-02` }}">{{ .Date | time.Format ":date_long" }}</time>
+						</div>
+						<p class="card-summary">{{ .Summary }}</p>
+					</div>
+				</div>
+			</li>
+		{{- end -}}
+	</ul>
+{{- end -}}

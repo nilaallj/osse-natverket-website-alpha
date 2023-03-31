@@ -1,0 +1,68 @@
+html {
+	background-color: var(--clr-canvas);
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	color: var(--clr-text-primary);
+	accent-color: var(--clr-brand-primary);
+	font-family: var(--ff-sans);
+
+	/* overflow-x: clip;
+	contain: paint; */
+}
+
+main, [id="site-footer"] {
+	font-size: var(--fs-fluid-400);
+}
+
+main {
+	padding-block-end: clamp(2.5rem, 10vw, 5rem);
+}
+
+[id="site-footer"] {
+	padding-block: clamp(2.5rem, 10vw, 5rem);
+}
+
+[id="site-footer"] {
+	background-color: var(--clr-brand-teritary);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+dl, dt, dd {
+	font: inherit;
+}
+
+dt {
+	font-weight: var(--fw-700);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: inherit;
+	margin-block-start: 1.5ex;
+	margin-block-end: 0.5ex;
+	font-family: var(--ff-serif);
+}
+
+/* Layouts */
+
+body > * {
+	padding-inline: max(1rem, 15vw - 4rem);
+}
+
+main p {
+	max-inline-size: 70ch;
+	margin-block-end: 0.8em;
+	line-height: 1.7;
+	font-weight: var(--fw-medium);
+}

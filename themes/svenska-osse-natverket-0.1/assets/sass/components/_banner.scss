@@ -1,0 +1,109 @@
+/* Header base */
+
+.body-header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 2.5em;
+	gap: 2rem;
+
+	/* &::after {
+		content: '';
+		position: absolute;
+		top: -88vh;
+		left: 50vw;
+		width: 100vw;
+		height: 100vh;
+		background-color: lightblue;
+		rotate: atan2(1vmin, 3vmax);
+		transform-origin: bottom left;
+		z-index: -1;
+	} */
+}
+
+.skip-link:focus {
+	position: absolute;
+	padding: 1em;
+	color: var(--clr-brand-primary);
+	background-color: var(--clr-accent);
+	border: .25em solid;
+	font-family: var(--ff-sans);
+	font-weight: var(--fw-bold);
+	z-index: 1;
+}
+
+.logo-anchor {
+	color: var(--clr-brand-primary);
+	margin-top: 1rem;
+	outline-offset: 0.5rem;
+}
+
+.logo-anchor-mask {
+	block-size: 4rem;
+	aspect-ratio: 634 / 280;
+	background-color: currentcolor;
+	forced-color-adjust: preserve-parent-color;
+
+	@supports (mask-image: url(images/image\.webp)) {
+		mask-image: url(images/logo-mask-img\.webp);
+		mask-repeat: no-repeat;
+		mask-size: contain;
+	}
+
+	@supports not (mask-image: url(images/image\.webp)) {
+		-webkit-mask-image: url(images/logo-mask-img\.webp);
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-size: contain;
+	}
+}
+
+/* Primary navigation */
+
+[id="primary-nav-list"] {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2ch;
+
+	a {
+		font-family: var(--ff-sans);
+		font-stretch: condensed;
+		font-weight: var(--fw-semibold);
+	}
+
+	> li {
+		font-size: var(--fs-fluid-400);
+	}
+}
+
+.sublist-parent {
+	position: relative;
+	display: flex;
+}
+
+[id$="-sublist"] {
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block-start: 100%;
+	min-inline-size: 20ch;
+
+	button[aria-expanded="false"] + & {
+		visibility: hidden;
+	}
+
+	&:last-child {
+		inset-inline-start: initial;
+		inset-inline-end: 0;
+	}
+
+	a {
+		display: flow-root;
+		color: var(--clr-canvas);
+		background-color: var(--clr-brand-secondary);
+		padding: 0.5ch;
+	}
+}
+
+button[aria-controls="primary-nav-list"] {
+	display: none;
+}

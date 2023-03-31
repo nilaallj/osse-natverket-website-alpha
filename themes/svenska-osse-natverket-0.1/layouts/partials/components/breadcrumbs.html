@@ -1,0 +1,12 @@
+<nav class="breadcrumb-nav" aria-label="Överordnade sidor">
+	<ol class="breadcrumb-list">
+		{{- range .Ancestors.Reverse -}}
+			<li>
+				<a href="{{ .Permalink }}">{{ .Title }}</a>
+			</li>
+		{{- end -}}
+		<li class="visually-hidden" aria-current="location">
+			<a href="#">{{ .Title }}</a>
+		</li>
+	</ol>
+</nav>

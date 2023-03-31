@@ -1,0 +1,4 @@
+<nav class="toc-nav" aria-labelledby="toc-headline">
+	<h2 id="toc-headline" class="fs-fluid-600">Innehållsförteckning</h2>
+	{{ . | replaceRE `<\/?nav[^>]*>` `` | safeHTML }}
+</nav>

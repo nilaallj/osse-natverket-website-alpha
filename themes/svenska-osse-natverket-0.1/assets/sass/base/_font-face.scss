@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "Open Sans";
+	src: url("open-sans-vf.ttf");
+	font-style: normal;
+	font-weight: 300 800;
+	font-stretch: 75% 100%;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "League Spartan";
+	src: url("league-spartan_vf.woff2");
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: fallback;
+}
+
+@font-face {
+    font-family: "Open Sans-fallback";
+    size-adjust: 105.43%;
+    ascent-override: 105%;
+    src: local("Arial");
+}

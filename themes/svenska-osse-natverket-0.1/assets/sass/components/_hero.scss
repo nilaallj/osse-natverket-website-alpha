@@ -1,0 +1,58 @@
+/* Beradcrumbs */
+
+.breadcrumb-list {
+	list-style: none;
+	display: flex;
+	color: var(--clr-text-dimmed);
+	font-stretch: condensed;
+	font-size: 1.2rem;
+	font-weight: var(--fw-bold);
+	padding-inline-start: unset;
+
+	> li > a {
+		color: inherit;
+	}
+
+	> li::after {
+		content: '/';
+		margin-inline: 1ch;
+	}
+}
+
+/* Hero */
+
+.front-matter {
+	margin-block-end: clamp(1.5rem, 5vw, 3rem);
+}
+
+.post-meta-container {
+	display: grid;
+	gap: 0.5em;
+	font-size: var(--fs-fluid-400);
+	font-weight: var(--fw-semibold);
+	border-inline-start: 0.25em solid var(--clr-brand-primary);
+	padding-inline-start: 0.5em;
+}
+
+/* Table of contents */
+
+.toc-nav {
+	> ol {
+		list-style: none;
+		padding-inline-start: unset;
+		display: grid;
+		gap: 2px;
+		color: var(--clr-brand-primary);
+		font-weight: var(--fw-semibold);
+	}
+
+	li {
+		border-inline-start: 0.25rem solid;
+		padding: 0.16em;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}

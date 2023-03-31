@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#233c76">
+    <title>{{ block "inside-title-tag" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+	<link rel="canonical" href="{{ .Permalink }}">
+	<link rel="preload" href="/league-spartan_vf.woff2" as="font" type="font/woff2" crossorigin>
+	{{- $sassOpt := (dict "targetPath" "styles.css" "transpiler" "dartsass" "outputStyle" "compressed") -}}
+	{{- $sass := resources.Get "sass/styles.scss" -}}
+	{{- $styles := $sass | resources.ToCSS $sassOpt | resources.Fingerprint "sha512" -}}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+	<script src="/js/primary-nav.js" defer></script>
+</head>
+<body>
+	<noscript>
+		<b class="no-js-banner fw-regular" role="note">JavaScript är inaktiverat i din webbläsare. JavaScript används på webbplatsen för att förbättra användar&shy;upplevelsen, vilket innebär att viss design samt vissa kosmetiska funktioner nu inte fungerar normalt. Dock är allt innehåll på sidan åtkomligt även utan JavaScript aktiverat.</b>
+	</noscript>
+	{{- partial "header.html" . -}}
+	{{- block "before-main" . -}} {{- end -}}
+	<main id="main-content">
+		{{- block "inside-main" . -}} {{- end -}}
+	</main>
+	{{- block "after-main" . -}} {{- end -}}
+	{{- partialCached "footer.html" . -}}
+</body>
+</html>

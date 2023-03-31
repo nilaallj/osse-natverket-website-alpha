@@ -1,0 +1,83 @@
+{{- define "inside-title-tag" -}} Hem | Svenska OSSE-nätverket {{- end -}}
+{{- define "inside-main" -}} 
+	<section class="home-hero-grid">
+		<h1 class="fs-fluid-900">Vi nätverkar för fred, samarbete & säkerhet i Europa</h1>
+		<p>Vi består av ett antal frivilligorganisationer samt enskilda medlemmar som ordnar möten och seminarier för att fördjupa kunskaperna om OSSE och öka intresset för OSSE:s idéer.</p>
+		<a class="btn-cta-primary" href="#">Bli medlem!</a>
+		<a class="btn-cta-secondary" href="#">Kontakta oss</a>
+	</section>
+	<section aria-labelledby="senaste-referat" class="card-list-wrapper">
+		<h2 id="senaste-referat" class="card-list-title">Senaste referat</h2>
+		<ul class="card-list" role="list">
+			{{- with .Site.GetPage "/dokument/referat" -}}
+				{{ range first 6 (.RegularPagesRecursive.ByDate.Reverse) }}
+						<li class="card">
+							<div class="card-content">
+								<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+								<div class="card-snippet">
+									<a class="card-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+									<div class="card-meta">
+										<p>av {{ .Params.författare }}</p>
+										<time datetime="{{ .Date | time.Format `2006-01-02` }}">{{ .Date | time.Format ":date_long" }}</time>
+									</div>
+									<p class="card-summary">{{ .Summary }}</p>
+								</div>
+							</div>
+						</li>
+				{{ end }}
+			{{- end -}}
+		</ul>
+		<a href="/dokument/referat/">Fler referat</a>
+	</section>
+	<section aria-labelledby="senaste-apeller" class="card-list-wrapper">
+		<h2 id="senaste-apeller" class="card-list-title">Senaste apeller</h2>
+		<ul class="card-list" role="list">
+			<li class="card">
+				<div class="card-content">
+					<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+					<div class="card-snippet">
+						<h3 class="card-title">Quam nulla et minima sed repellendus soluta.</h3>
+						<p class="card-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem numquam, perferendis, recusandae illo eius enim itaque ea quidem ut praesentium nulla ex alias unde velit?</p>
+					</div>
+				</div>
+			</li>
+			<li class="card">
+				<div class="card-content">
+					<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+					<div class="card-snippet">
+						<h3 class="card-title">Officia, ducimus odio rerum veritatis iure quibusdam?</h3>
+						<p class="card-summary">Quam nulla et minima sed repellendus soluta. Odio saepe incidunt nihil commodi nisi quae excepturi doloribus nostrum explicabo accusantium, laborum aspernatur animi dolor, maiores debitis.</p>
+					</div>
+				</div>
+			</li>
+			<li class="card">
+				<div class="card-content">
+					<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+					<div class="card-snippet">
+						<h3 class="card-title">Qui magni architecto officia asperiores, voluptate doloribus.</h3>
+						<p class="card-summary">Numquam blanditiis praesentium excepturi modi perspiciatis rerum, ad harum esse velit pariatur dolor, saepe ducimus. Ullam est voluptate neque harum fugiat amet ipsum debitis quam?</p>
+					</div>
+				</div>
+			</li>
+			<li class="card">
+				<div class="card-content">
+					<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+					<div class="card-snippet">
+						<h3 class="card-title">Perferendis alias eligendi nihil omnis cumque molestias.</h3>
+						<p class="card-summary">Nesciunt, odit reprehenderit! Voluptatibus ab, dolor consequuntur nisi optio, doloribus mollitia minima, aut a facilis labore architecto quam sint incidunt ipsam quibusdam libero facere molestias.</p>
+					</div>
+				</div>
+			</li>
+			<li class="card">
+				<div class="card-content">
+					<img src="https://picsum.photos/seed/{{ index (seq 100 | shuffle) 0 }}/560/380.webp" alt="" width="560" height="380" loading="lazy">
+					<div class="card-snippet">
+						<h3 class="card-title">Cumque dolor explicabo eveniet sequi, consequuntur veniam!</h3>
+						<p class="card-summary">Beatae a commodi iusto! Exercitationem iste est provident, quasi quos quo voluptatum debitis vel, aut necessitatibus consequuntur cum sapiente blanditiis alias, doloremque delectus dolor dicta.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<a href="/dokument/apeller/">Fler apeller</a>
+	</section>
+{{- end -}}

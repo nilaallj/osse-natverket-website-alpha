@@ -1,0 +1,16 @@
+{
+
+	"[html]": {
+		"editor.links": false
+	},
+	"markdown.preview.fontFamily": "\"PT Root UI\", system-ui",
+	"workbench.editor.languageDetection": true,
+	"oneDarkPro.markdownStyle": true,
+	"go-template.languages": [
+		"toml",
+		"yaml",
+		"markdown",
+		"html"
+	],
+	"breadcrumbs.enabled": true
+}

@@ -1,0 +1,19 @@
+.fs-fluid-300 { font-size: var(--fs-fluid-300); }
+.fs-fluid-400 { font-size: var(--fs-fluid-400); }
+.fs-fluid-500 { font-size: var(--fs-fluid-500); }
+.fs-fluid-600 { font-size: var(--fs-fluid-600); }
+.fs-fluid-700, h2 { font-size: var(--fs-fluid-700); font-weight: var(--fw-bold); }
+.fs-fluid-800 { font-size: var(--fs-fluid-800); font-weight: var(--fw-bold); }
+.fs-fluid-900 { font-size: var(--fs-fluid-900); font-weight: var(--fw-bold); }
+
+.fw-bold { font-weight: var(--fw-bold); }
+
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
