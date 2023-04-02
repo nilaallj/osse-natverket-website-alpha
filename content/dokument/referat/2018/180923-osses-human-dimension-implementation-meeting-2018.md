@@ -4,7 +4,6 @@ slug: osses-human-dimension-implementation-meeting-2018
 aliases:
 - /dokument/referat/hdim2018/
 date: 2018-09-23
-draft: true
 författare: Ingmar Oldberg
 taggar:
 - Human Dimension Implementation Meeting (HDIM)
