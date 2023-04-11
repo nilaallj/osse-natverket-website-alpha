@@ -1,12 +1,27 @@
-:where(button, .btn) {
+:where(button, a[class|="btn"]) {
 	all: unset;
 	outline: revert;
 	outline-offset: revert;
 	cursor: pointer;
 	display: inline-flex;
 	background-color: transparent;
+	font-weight: var(--fw-bold);
+	line-height: 1;
 	
 	> :is(svg, use) {
 		fill: currentcolor;
+		align-self: baseline;
 	}
+}
+
+:where(button, a)[class|="btn"] {
+	margin-block: 1.5lh;
+	margin-inline-end: 1.5rem;
+}
+
+.btn-cta-primary {
+	color: var(--clr-brightest);
+	background-image: linear-gradient(to right, var(--clr-gradient-start), var(--clr-gradient-end));
+	padding: 0.75em;
+	border-radius: 2vmin;
 }

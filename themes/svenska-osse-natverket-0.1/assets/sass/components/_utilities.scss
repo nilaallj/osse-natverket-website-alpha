@@ -6,7 +6,12 @@
 .fs-fluid-800 { font-size: var(--fs-fluid-800); font-weight: var(--fw-bold); }
 .fs-fluid-900 { font-size: var(--fs-fluid-900); font-weight: var(--fw-bold); }
 
+.fw-semibold { font-weight: var(--fw-semibold); }
 .fw-bold { font-weight: var(--fw-bold); }
+
+.clr-text-secondary {
+	color: var(--clr-text-secondary);
+}
 
 .visually-hidden:not(:focus):not(:active) {
 	clip: rect(0 0 0 0);

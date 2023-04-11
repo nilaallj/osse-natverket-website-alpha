@@ -16,24 +16,10 @@ body {
 	font-family: var(--ff-sans);
 }
 
-main, [id="site-footer"] {
-	font-size: var(--fs-fluid-400);
-}
-
 main {
-	padding-block-end: clamp(2.5rem, 10vw, 5rem);
-}
-
-[id="site-footer"] {
-	padding-block: clamp(2.5rem, 10vw, 5rem);
-}
-
-[id="site-footer"] {
-	background-color: var(--clr-brand-teritary);
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 2rem;
+	line-height: 1.7;
+	font-weight: var(--fw-medium);
+	font-size: var(--fs-fluid-400);
 }
 
 dl, dt, dd {
@@ -46,6 +32,8 @@ dt {
 
 h1, h2, h3, h4, h5, h6 {
 	font: inherit;
+	line-height: initial;
+	text-wrap: balance;
 	margin-block-start: 1.5ex;
 	margin-block-end: 0.5ex;
 	font-family: var(--ff-serif);
@@ -53,13 +41,30 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Layouts */
 
-body > * {
-	padding-inline: max(1rem, 15vw - 4rem);
+.inner-container {
+	margin-inline: max(1rem, 10vw - 4rem);
+	margin-block: clamp(2.5rem, 10vw, 5rem);
 }
 
-main p {
-	max-inline-size: 70ch;
-	margin-block-end: 0.8em;
-	line-height: 1.7;
-	font-weight: var(--fw-medium);
+.body-matter {
+	max-inline-size: 66ch;
+
+	p {
+		margin-block-end: 0.85em;
+	}
+}
+
+/* Footer */
+
+[id="site-footer"] {
+	color: var(--clr-text-teritary);
+	background-color: var(--clr-brand-teritary);
+}
+
+.footer-content {
+	font-size: var(--fs-fluid-400);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 2rem;
 }

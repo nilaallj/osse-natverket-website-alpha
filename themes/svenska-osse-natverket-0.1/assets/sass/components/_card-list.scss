@@ -47,8 +47,10 @@
 	order: -1;
 	color: inherit;
 	text-decoration: none;
+	text-wrap: balance;
 	font-size: clamp(1.2rem, 1rem + 1.5cqi, 1.5rem);
 	font-weight: var(--fw-bold);
+	line-height: normal;
 	margin: unset;
 }
 
@@ -69,10 +71,13 @@
 
 	> p {
 		font: inherit;
+	}
+
+	> hr {
+		all: unset;
 
 		&::after {
 			content: '•';
-			margin-inline-start: 0.7ch;
 		}
 	}
 }

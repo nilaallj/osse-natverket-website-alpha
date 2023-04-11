@@ -7,12 +7,12 @@
 	<meta name="theme-color" content="#233c76">
     <title>{{ block "inside-title-tag" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 	<link rel="canonical" href="{{ .Permalink }}">
-	<link rel="preload" href="{{ .Site.BaseURL }}league-spartan_vf.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="league-spartan_vf.woff2" as="font" type="font/woff2" crossorigin>
 	{{- $sassOpt := (dict "targetPath" "styles.css" "transpiler" "dartsass" "outputStyle" "compressed") -}}
 	{{- $sass := resources.Get "sass/styles.scss" -}}
 	{{- $styles := $sass | resources.ToCSS $sassOpt | resources.Fingerprint "sha512" -}}
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
-	<script src="{{ .Site.BaseURL }}js/primary-nav.js" defer></script>
+	<script src="js/primary-nav.js" defer></script>
 </head>
 <body>
 	<noscript>
@@ -21,7 +21,9 @@
 	{{- partial "header.html" . -}}
 	{{- block "before-main" . -}} {{- end -}}
 	<main id="main-content">
-		{{- block "inside-main" . -}} {{- end -}}
+		<div class="inner-container">
+			{{- block "inside-main" . -}} {{- end -}}
+		</div>
 	</main>
 	{{- block "after-main" . -}} {{- end -}}
 	{{- partialCached "footer.html" . -}}

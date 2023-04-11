@@ -2,7 +2,7 @@
 {{- define "inside-main" -}} 
 	<section class="home-hero-grid">
 		<h1 class="fs-fluid-900">Vi nätverkar för fred, samarbete & säkerhet i Europa</h1>
-		<p>Vi består av ett antal frivilligorganisationer samt enskilda medlemmar som ordnar möten och seminarier för att fördjupa kunskaperna om OSSE och öka intresset för OSSE:s idéer.</p>
+		<p class="clr-text-secondary fw-semibold">Vi består av ett antal frivilligorganisationer samt enskilda medlemmar som ordnar möten och seminarier för att fördjupa kunskaperna om OSSE och öka intresset för OSSE:s idéer.</p>
 		<a class="btn-cta-primary" href="#">Bli medlem!</a>
 		<a class="btn-cta-secondary" href="#">Kontakta oss</a>
 	</section>
@@ -17,7 +17,8 @@
 								<div class="card-snippet">
 									<a class="card-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
 									<div class="card-meta">
-										<p>av {{ .Params.författare }}</p>
+										<p>{{ .Params.författare }}</p>
+										<hr>
 										<time datetime="{{ .Date | time.Format `2006-01-02` }}">{{ .Date | time.Format ":date_long" }}</time>
 									</div>
 									<p class="card-summary">{{ .Summary }}</p>
