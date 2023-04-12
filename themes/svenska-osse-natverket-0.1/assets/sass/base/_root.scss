@@ -12,12 +12,16 @@
 	--fs-fluid-800: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 	--fs-fluid-900: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
+	/* Spacing */
+	--outer-inline-margin: max(1rem + 1vw, 50% - 70rem / 2);
+
 	/* Font weights */
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-medium: 500;
 	--fw-semibold: 600;
 	--fw-bold: 700;
+	--fw-extrabold: 800;
 	--fw-black: 900;
 
 	/* Colors */

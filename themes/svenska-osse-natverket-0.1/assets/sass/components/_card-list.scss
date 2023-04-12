@@ -21,8 +21,21 @@
 	--outer-padding: max(2vmin, 1rem);
 	--inner-border-radius: 0.5rem;
 	--outer-border-radius: calc(var(--inner-border-radius) + var(--outer-padding));
-	border: 1px solid var(--clr-text-dimmed);
+	outline-width: 1px;
+	outline-color: var(--clr-text-dimmed);
+	outline-style: solid;
 	border-radius: var(--outer-border-radius);
+
+	@media (prefers-reduced-motion: no-preference) {
+		transition-property: outline-width, outline-color;
+		transition-duration: 100ms;
+	}
+	
+
+	&:hover {
+		outline-width: 2.5px;
+		outline-color: var(--clr-accent);
+	}
 }
 
 .card-content {
@@ -49,9 +62,15 @@
 	text-decoration: none;
 	text-wrap: balance;
 	font-size: clamp(1.2rem, 1rem + 1.5cqi, 1.5rem);
-	font-weight: var(--fw-bold);
+	font-weight: var(--fw-extrabold);
 	line-height: normal;
 	margin: unset;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
 }
 
 .card-snippet {

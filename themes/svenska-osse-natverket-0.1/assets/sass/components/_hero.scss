@@ -7,7 +7,7 @@
 	font-stretch: condensed;
 	font-size: 1.2rem;
 	font-weight: var(--fw-bold);
-	padding-inline-start: unset;
+	padding-inline-start: var(--outer-inline-margin);
 
 	> li > a {
 		color: inherit;

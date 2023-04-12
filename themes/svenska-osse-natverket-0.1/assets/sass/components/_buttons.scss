@@ -1,5 +1,6 @@
 :where(button, a[class|="btn"]) {
 	all: unset;
+	box-sizing: border-box;
 	outline: revert;
 	outline-offset: revert;
 	cursor: pointer;
@@ -10,7 +11,7 @@
 	
 	> :is(svg, use) {
 		fill: currentcolor;
-		align-self: baseline;
+		align-self: last baseline;
 	}
 }
 
@@ -24,4 +25,14 @@
 	background-image: linear-gradient(to right, var(--clr-gradient-start), var(--clr-gradient-end));
 	padding: 0.75em;
 	border-radius: 2vmin;
+	outline-offset: 0.3rem;
+	transition: translate 300ms;
+
+	@media (forced-colors: active) {
+		border: 2px solid currentcolor;
+	}
+
+	&:hover {
+		translate: 0 5px;
+	}
 }
