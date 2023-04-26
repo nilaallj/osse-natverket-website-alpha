@@ -1,6 +1,8 @@
 ---
 title: Rapport från Ukrainaseminarium
 slug: rapport-fran-ukrainaseminarium
+alias:
+- /referat-och-dokument/rapport-fran-ukrainaseminarium-per-trehorning
 date: 2023-02-02
 författare: Pär Trehörning
 länder:
@@ -12,7 +14,7 @@ Att se ett slut på kriget i Ukraina, är naturligtvis svårt om än inte omöjl
 
 Peter Lidén, överstelöjtnant vid Försvarshögskolan och tidigare militärattaché; Jesper Roine, professor i nationalekonomi och forskare vid Östekonomiska Institutet vid Handelshögskolan i Stockholm samt Katarina Engberg, fil dr i freds- och konfliktstudier och senior rådgivare vid Svenska institutet för europapolitiska studier, hade bjudits in av ABF-Stockholm OSSE-nätverket och Sällskapet för Studier av Ryssland, Central- och Östeuropa samt Centralasien (Sällskapet). Samtalsledare var Krister Eduards, programansvarig i Sällskapet och tidigare ambassadråd vid Sveriges ambassad i Moskva.
 
-Seminariet kan i sin helhet avlyssnas här
+[Lyssna på seminariet i sin helhet](https://www.facebook.com/abf.stockholm/videos/3473872406179994)
 
 Peter Lidén förklarade att det från krigets början för nära ett år sedan fanns sju
 angreppsmöjligheter för Ryssland att angripa Ukraina. Men månadsvisa bantningar på grund av krigets utveckling har inneburit att Ryssland koncentrerat sina ansträngningar mot östra Ukraina och illegalt annekterat de fyra regionerna Luhansk, Donetsk, Cherson och Zaporizjzja. Ett av målen är att styra sjöfarten vid Chersons hamn.

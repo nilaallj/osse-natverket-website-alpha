@@ -9,12 +9,12 @@
 	padding-inline: var(--outer-inline-margin);
 
 	&::after {
-		content: '';
-		position: absolute;
 		--w: 66vw;
 		--h: calc(33vmin + 5vmax);
 		--y1: calc(var(--h) / 4);
 		--y2: calc(-1 * (var(--w) + var(--y1)));
+		content: '';
+		position: absolute;
 		top: 0;
 		right: 0;
 		width: var(--w);

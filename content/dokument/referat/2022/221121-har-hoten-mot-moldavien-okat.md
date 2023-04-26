@@ -1,6 +1,8 @@
 ---
 title: Har hoten mot Moldavien ökat?
 slug: har-hoten-mot-moldavien-okat
+alias:
+- /referat-och-dokument/har-hoten-mot-moldavien-okat
 date: 2022-11-21
 författare: Pär Trehörning
 länder:

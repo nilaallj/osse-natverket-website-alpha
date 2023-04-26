@@ -4,6 +4,11 @@
 	--ff-serif: "League Spartan", "Georgia", serif;
 
 	/* Font sizes */
+	--fs-200: 0.8rem;
+	--fs-300: 0.9rem;
+	--fs-400: 1rem;
+	--fs-500: 1.15rem;
+
 	--fs-fluid-300: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 	--fs-fluid-400: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 	--fs-fluid-500: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);

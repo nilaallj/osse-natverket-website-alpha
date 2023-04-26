@@ -3,6 +3,7 @@ title: OSSE:s Human Dimension Implementation Meeting (HDIM) 10-21 september 2018
 slug: osses-human-dimension-implementation-meeting-2018
 aliases:
 - /dokument/referat/hdim2018/
+- /referat-och-dokument/hdim2018
 date: 2018-09-23
 författare: Ingmar Oldberg
 taggar:

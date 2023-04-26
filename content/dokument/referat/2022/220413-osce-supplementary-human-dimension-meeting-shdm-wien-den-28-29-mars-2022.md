@@ -3,6 +3,7 @@ title: OSCE Supplementary Human Dimension Meeting (SHDM), Wien den 28–29 mars 
 slug: osce-supplementary-human-dimension-meeting-2022
 aliases:
 - /dokument/referat/shdm2022/
+- /referat-och-dokument/osce-supplementary-human-dimension-meeting-shdm-wien-den-28-29-mars-2022-av-nils-eliasson
 date: 2022-04-13
 draft: true
 författare: Nils Eliasson

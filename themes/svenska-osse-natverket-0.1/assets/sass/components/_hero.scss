@@ -14,8 +14,12 @@
 	}
 
 	> li::after {
-		content: '/';
+		content: '';
+		display: inline-block;
 		margin-inline: 1ch;
+		rotate: 15deg;
+		border-right: 0.11em solid;
+		block-size: 0.75em;
 	}
 }
 

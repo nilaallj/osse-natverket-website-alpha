@@ -1,6 +1,8 @@
 ---
 title: Civilsamhället i centrum – Starka berättelser på välbesökt seminarier med årets fredsprismottagare
 slug: civilsamhallet-i-centrum-starka-berattelser-pa-valbesokt-seminarier-med-arets-fredsprismottagare
+alias:
+- /referat-och-dokument/civilsamhallet-i-centrum-starka-berattelser-pa-valbesokt-seminarier-med-arets-fredspris-mottagare
 date: 2022-12-15
 författare: Pär Trehörning
 länder:

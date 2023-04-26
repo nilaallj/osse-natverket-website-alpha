@@ -1,6 +1,8 @@
 ---
 title: Centraleuropa i skuggan av kriget i Ukraina
 slug: centraleuropa-i-skuggan-av-kriget-i-ukraina
+alias:
+- /referat-och-dokument/centraleuropa-i-skuggan-av-kriget-i-ukraina-rapport
 date: 2022-09-05
 författare: Pär Trehörning
 ---

@@ -1,6 +1,8 @@
 ---
 title: Vad spelar kyrkorna i Ukraina för roll i kriget?
 slug: vad-spelar-kyrkorna-i-ukraina-for-roll-i-kriget
+alias:
+- /referat-och-dokument/vad-spelar-kyrkorna-i-ukraina-for-roll-for-kriget
 date: 2023-01-31
 författare: Annika Ahlefelt
 länder:
@@ -41,6 +43,6 @@ Inte heller Kyrkornas världsråd har uttalat sig tydligt mot det ryska kriget i
 
 – Det är ganska sorgligt. Och nu finns bara den rysk-ortodoxa kyrkan kvar som medlem i Kyrkornas världsråd. Men man har inte längre den styrkeposition man tidigare talade utifrån. Under världsrådets generalförsamling i Karlsruhe under sensommaren 2022 var den rysk-ortodoxa gruppen ganska isolerad.
 
-Rapporten är en något reviderad version av en artikel om seminariet i den kristna nyhetstidningen Sändaren, nr 6, 2023: https://www.sandaren.se/nyhet/besvikelse-over-pavens-hovsamma-krigskritik
+Rapporten är en något reviderad version av en artikel om seminariet i den kristna nyhetstidningen Sändaren, nr 6, 2023: <https://www.sandaren.se/nyhet/besvikelse-over-pavens-hovsamma-krigskritik>
 
 Se också samtalet utifrån seminariet i poddcast här ovan.

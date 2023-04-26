@@ -1,6 +1,8 @@
 ---
 title: Rapport från deltagande i OSSE:s ”Supplementary Human Dimension Meeting on the Functioning of Democratic Institutions in Times of Crisis” 16–17 maj 2022 i Wien
 slug: supplementary-human-dimension-meeting-on-the-functioning-of-democratic-institutions-in-times-of-crisis-2022
+alias:
+- /rapport-fran-deltagande-i-osses-supplementary-human-dimension-meeting-on-the-functioning-of-democratic-institutions-in-times-of-crisis-16-17-maj-2022-i-wien
 date: 2022-05-29
 författare: Anki Wetterberg
 ---
